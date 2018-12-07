@@ -1,9 +1,9 @@
-package com.renatodias.desafio.Data.Network;
+package com.renatodias.desafio.service.Network;
 
 
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Model.Users;
-import com.renatodias.desafio.Data.Util.Constant;
+import com.renatodias.desafio.Model.Users;
+import com.renatodias.desafio.Model.User;
+import com.renatodias.desafio.Util.Constant;
 
 import java.util.List;
 

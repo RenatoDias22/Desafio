@@ -1,4 +1,4 @@
-package com.renatodias.desafio.Data.Util;
+package com.renatodias.desafio.Util;
 
 import android.databinding.BindingAdapter;
 import android.widget.ImageView;

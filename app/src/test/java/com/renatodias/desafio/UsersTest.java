@@ -1,6 +1,6 @@
 package com.renatodias.desafio;
 
-import com.renatodias.desafio.Data.Model.Users;
+import com.renatodias.desafio.Model.Users;
 
 import org.junit.Assert;
 import org.junit.Test;

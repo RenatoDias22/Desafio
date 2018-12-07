@@ -1,4 +1,4 @@
-package com.renatodias.desafio.Views.UsersView;
+package com.renatodias.desafio.viewControllers;
 
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,13 +12,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Model.Users;
-import com.renatodias.desafio.Data.Util.Constant;
+import com.renatodias.desafio.adapters.UserAdapter;
+import com.renatodias.desafio.Model.User;
+import com.renatodias.desafio.Model.Users;
+import com.renatodias.desafio.Util.Constant;
 import com.renatodias.desafio.R;
-import com.renatodias.desafio.Views.UserDetailsView.UserDetailsActivity;
+import com.renatodias.desafio.viewModel.UsersViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -46,9 +48,8 @@ public class UsersActivity extends AppCompatActivity implements UsersViewModel.U
         this.setupRecycleView();
         this.setupSearch();
 
-        setData();
-//        usersModel = new UsersViewModel(this, this);
-//        usersModel.getUsers();
+        usersModel = new UsersViewModel(this, this);
+        usersModel.getUsers();
     }
 
     @Override
@@ -69,7 +70,10 @@ public class UsersActivity extends AppCompatActivity implements UsersViewModel.U
 
     @Override
     public void notUsersViewModelChange() {
+
         setVisibilityErro(true);
+        Toast.makeText(this, "Ainda não há usuarios disponiveis.", Toast.LENGTH_LONG).show();
+
     }
 
     @Override
@@ -104,17 +108,6 @@ public class UsersActivity extends AppCompatActivity implements UsersViewModel.U
         Constant.user = user;
         Intent intent = new Intent(this, UserDetailsActivity.class);
         startActivity(intent);
-    }
-
-    public void setData() {
-        userList.add(new User( "defunkt", 2,  "MDQ6VXNlcjI=", "https://avatars0.githubusercontent.com/u/2?v=4",  "", "https://github.com/defunkt", "https://api.github.com/users/defunkt", "Chris Wanstrath", "@github ", "http://chriswanstrath.com/", "San Francisco",  107, 273, 20530, 210));
-        userList.add(new User( "wycats", 4,  "MDQ6VXNlcjQ=", "https://avatars0.githubusercontent.com/u/4?v=4",  "", "https://github.com/wycats", "https://github.com/wycats", "Yehuda Katz", "Tilde, Inc.", "http://yehudakatz.com", "San Francisco",  210, 750, 9068, 4));
-        userList.add(new User( "mojombo", 1,  "MDQ6VXNlcjE=", "https://avatars0.githubusercontent.com/u/1?v=4",  "", "https://api.github.com/users/mojombo", "https://github.com/mojombo", "Tom Preston-Werner", null, "http://tom.preston-werner.com", "San Francisco",  61, 62, 21266, 11));
-        userList.add(new User( "pjhyett", 3,  "MDQ6VXNlcjM==", "https://avatars0.githubusercontent.com/u/3?v=4",  "", "https://api.github.com/users/pjhyett", "https://github.com/pjhyett", "PJ Hyett", "GitHub, Inc.", "https://hyett.com", "San Francisco",  8, 21, 8195, 30));
-        userList.add(new User( "ezmobius", 5,  "MDQ6VXNlcjU=", "https://avatars0.githubusercontent.com/u/5?v=4",  "", "https://api.github.com/users/ezmobius", "https://github.com/ezmobius", "Ezra Zygmuntowicz", "Stuffstr PBC", "http://stuffstr.com", "In the NW",  22, 106, 477, 13));
-        userList.add(new User( "ivey", 6,  "MDQ6VXNlcjY==", "https://avatars0.githubusercontent.com/u/6?v=4",  "", "https://api.github.com/users/ivey", "https://github.com/ivey", "Michael D. Ivey", "@RiotGames", "http://gweezlebur.com", "Tuscumbia, AL",  86, 79, 83, 2));
-
-        Constant.User = userList;
     }
 
     public void setupNavigation() {

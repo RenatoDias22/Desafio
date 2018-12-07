@@ -1,11 +1,11 @@
-package com.renatodias.desafio.Data.Repository;
+package com.renatodias.desafio.service.Repository;
 
 import android.app.ProgressDialog;
 import android.content.Context;
 
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Model.Users;
-import com.renatodias.desafio.Data.Network.UsersService;
+import com.renatodias.desafio.Model.Users;
+import com.renatodias.desafio.Model.User;
+import com.renatodias.desafio.service.Network.UsersService;
 
 import java.util.List;
 

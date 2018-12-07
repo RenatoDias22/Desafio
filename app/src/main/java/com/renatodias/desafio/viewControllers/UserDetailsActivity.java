@@ -1,14 +1,14 @@
-package com.renatodias.desafio.Views.UserDetailsView;
+package com.renatodias.desafio.viewControllers;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Util.Constant;
+import com.renatodias.desafio.Model.User;
+import com.renatodias.desafio.Util.Constant;
 import com.renatodias.desafio.R;
-import com.renatodias.desafio.Views.UsersView.UsersActivity;
+import com.renatodias.desafio.viewModel.UserDetailsViewModel;
+
 
 public class UserDetailsActivity extends AppCompatActivity  implements UserDetailsViewModel.UsersViewDetailsModelListener {
 

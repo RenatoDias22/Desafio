@@ -1,7 +1,7 @@
-package com.renatodias.desafio.Data.Util;
+package com.renatodias.desafio.Util;
 
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Model.Users;
+import com.renatodias.desafio.Model.Users;
+import com.renatodias.desafio.Model.User;
 
 import java.util.ArrayList;
 import java.util.List;

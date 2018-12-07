@@ -1,11 +1,11 @@
-package com.renatodias.desafio.Views.UserDetailsView;
+package com.renatodias.desafio.viewModel;
 
 import android.content.Context;
 import android.databinding.DataBindingUtil;
 import android.view.LayoutInflater;
 import com.renatodias.desafio.R;
-import com.renatodias.desafio.Data.Model.User;
 import com.renatodias.desafio.databinding.UserDetailsBinding;
+import com.renatodias.desafio.Model.User;
 
 public class UserDetailsViewModel {
 

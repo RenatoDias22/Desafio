@@ -1,4 +1,4 @@
-package com.renatodias.desafio.Data.Model;
+package com.renatodias.desafio.Model;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;

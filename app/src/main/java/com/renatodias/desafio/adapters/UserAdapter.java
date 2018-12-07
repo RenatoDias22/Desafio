@@ -1,12 +1,12 @@
-package com.renatodias.desafio.Views.UsersView;
+package com.renatodias.desafio.adapters;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import com.renatodias.desafio.Model.User;
 
-import com.renatodias.desafio.Data.Model.User;
 import com.renatodias.desafio.databinding.UsersBinding;
 
 import java.util.List;

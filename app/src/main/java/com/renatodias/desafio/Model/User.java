@@ -1,13 +1,9 @@
-package com.renatodias.desafio.Data.Model;
-
+package com.renatodias.desafio.Model;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.view.View;
-import android.widget.Toast;
 
 import com.google.gson.annotations.SerializedName;
 import com.renatodias.desafio.BR;
-import com.renatodias.desafio.Views.UsersView.UsersActivity;
 
 public class User extends BaseObservable {
 

@@ -1,13 +1,12 @@
-package com.renatodias.desafio.Views.UsersView;
+package com.renatodias.desafio.viewModel;
 
 import android.arch.lifecycle.ViewModel;
 import android.content.Context;
-import android.widget.Toast;
 
 import com.miguelcatalan.materialsearchview.MaterialSearchView;
-import com.renatodias.desafio.Data.Model.User;
-import com.renatodias.desafio.Data.Model.Users;
-import com.renatodias.desafio.Data.Repository.UsersRepository;
+import com.renatodias.desafio.Model.Users;
+import com.renatodias.desafio.Model.User;
+import com.renatodias.desafio.service.Repository.UsersRepository;
 
 import java.util.List;
 
@@ -55,7 +54,6 @@ public class UsersViewModel extends ViewModel implements UsersRepository.UsersRe
     public void notUseres() {
 
         listener.notUsersViewModelChange();
-        Toast.makeText(context, "Ainda não há usuarios disponiveis.", Toast.LENGTH_LONG).show();
     }
 
     @Override
